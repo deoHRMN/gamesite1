@@ -1,120 +1,35 @@
-/* General Layout */
-
-.store-container {
-  min-height: 100vh; /* Full viewport height */
-  padding: 20px;
-  background-color: black;
-}
-
-.equal-height-row {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping */
-}
-
-.store-left-column,
-.store-right-column {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* Make sure text doesn't overflow the container */
-}
-
-.store-left-column {
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.store-right-column {
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.products-list-scroll {
-  overflow-y: auto; /* Enable scrolling for long content */
-  flex-grow: 1;
-  border-radius: 10px;
-  max-height: 100%;
-}
-
-.categories-scroll {
-  overflow-y: auto;
-  flex-grow: 1;
-  border-radius: 10px;
-  max-height: 100%;
-}
-
-.mb-3 {
-  margin-bottom: 20px; /* Space between rows */
-}
-
-.products-list-scroll::-webkit-scrollbar,
-.categories-scroll::-webkit-scrollbar {
-  width: 8px;
-}
-
-.products-list-scroll::-webkit-scrollbar-track,
-.categories-scroll::-webkit-scrollbar-track {
-  background: #333;
-}
-
-.products-list-scroll::-webkit-scrollbar-thumb,
-.categories-scroll::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 10px;
-}
-
-.products-list-scroll::-webkit-scrollbar-thumb:hover,
-.categories-scroll::-webkit-scrollbar-thumb:hover {
-  background: #777;
-}
-
-/* GameCardList Specific CSS */
-
-.game-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Space between cards */
-  overflow: hidden; /* Prevent overflow in the card list */
-}
-
-.game-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #222;
-  padding: 15px;
+.custom-pagination .pagination-button {
+  padding: 10px 20px;
   border-radius: 5px;
-  min-height: 180px; /* Ensure card height */
-  max-height: 220px; /* Set max height to avoid overflow */
-  overflow: hidden; /* Hide overflowing content */
-}
-
-.game-card h2 {
-  font-size: 18px;
+  border: none;
+  color: white;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
 }
 
-.game-card p {
-  font-size: 14px;
-  color: #aaa;
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  white-space: nowrap; /* Force text to stay on one line */
-  margin: 0;
+.custom-pagination .previous {
+  background-color: #555; /* Gray for disabled/previous button */
 }
 
-.game-card .price {
-  font-size: 20px;
-  color: #59e;
-  margin-top: auto;
+.custom-pagination .next {
+  background-color: #007bff; /* Blue for next button */
 }
 
-/* Add responsive breakpoints if necessary */
-@media (max-width: 768px) {
-  .game-card {
-    max-height: 200px; /* Reduce card height on smaller screens */
-  }
+.custom-pagination .pagination-button:hover {
+  opacity: 0.8;
+}
+
+.custom-pagination .pagination-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.custom-pagination .page-number {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
   .game-card p {
     white-space: normal; /* Allow text to wrap normally on small screens */
