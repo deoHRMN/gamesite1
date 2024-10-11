@@ -3,28 +3,28 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './Library.css'; // Custom styling if needed
 
 const games = [
-  { id: 1, name: 'Game 1', image: '${process.env.PUBLIC_URL}/images/game1.jpg' },
-  { id: 2, name: 'Game 2', image: '${process.env.PUBLIC_URL}/images/game2.jpg' },
-  { id: 3, name: 'Game 3', image: '${process.env.PUBLIC_URL}/images/game3.jpg' },
-  { id: 4, name: 'Game 4', image: '${process.env.PUBLIC_URL}/images/game4.jpg' },
-  { id: 5, name: 'Game 5', image: '${process.env.PUBLIC_URL}/images/game5.jpg' },
-  { id: 6, name: 'Game 6', image: '${process.env.PUBLIC_URL}/images/game6.jpg' },
-  { id: 7, name: 'Game 7', image: '${process.env.PUBLIC_URL}/images/game7.jpg' },
-  { id: 8, name: 'Game 8', image: '${process.env.PUBLIC_URL}/images/game8.jpg' },
-  { id: 9, name: 'Game 9', image: '${process.env.PUBLIC_URL}/images/game9.jpg' },
-  { id: 10, name: 'Game 10', image: '${process.env.PUBLIC_URL}/images/game10.jpg' },
-  { id: 11, name: 'Game 11', image: '${process.env.PUBLIC_URL}/images/game11.jpg' },
-  { id: 12, name: 'Game 12', image: '${process.env.PUBLIC_URL}/images/game12.jpg' },
-  { id: 13, name: 'Game 13', image: '${process.env.PUBLIC_URL}/images/game13.jpg' },
-  { id: 14, name: 'Game 14', image: '${process.env.PUBLIC_URL}/images/game14.jpg' },
-  { id: 15, name: 'Game 15', image: '${process.env.PUBLIC_URL}/images/game15.jpg' },
-  { id: 16, name: 'Game 16', image: '${process.env.PUBLIC_URL}/images/game16.jpg' },
-  { id: 17, name: 'Game 17', image: '${process.env.PUBLIC_URL}/images/game17.jpg' },
-  { id: 18, name: 'Game 18', image: '${process.env.PUBLIC_URL}/images/game18.jpg' },
+  { id: 1, name: 'Game 1', image: `${process.env.PUBLIC_URL}/images/game1.jpg` },
+  { id: 2, name: 'Game 2', image: `${process.env.PUBLIC_URL}/images/game2.jpg`},
+  { id: 3, name: 'Game 3', image: `${process.env.PUBLIC_URL}/images/game3.jpg`},
+  { id: 4, name: 'Game 4', image: `${process.env.PUBLIC_URL}/images/game4.jpg`},
+  { id: 5, name: 'Game 5', image: `${process.env.PUBLIC_URL}/images/game5.jpg`},
+  { id: 6, name: 'Game 6', image: `${process.env.PUBLIC_URL}/images/game6.jpg`},
+  { id: 7, name: 'Game 7', image: `${process.env.PUBLIC_URL}/images/game7.jpg`},
+  { id: 8, name: 'Game 8', image: `${process.env.PUBLIC_URL}/images/game8.jpg`},
+  { id: 9, name: 'Game 9', image: `${process.env.PUBLIC_URL}/images/game9.jpg`},
+  { id: 10, name: 'Game 10', image: `${process.env.PUBLIC_URL}/images/game10.j`},
+  { id: 11, name: 'Game 11', image: `${process.env.PUBLIC_URL}/images/game11.jp` },
+  { id: 12, name: 'Game 12', image: `${process.env.PUBLIC_URL}/images/game12.jp` },
+  { id: 13, name: 'Game 13', image: `${process.env.PUBLIC_URL}/images/game13.jp` },
+  { id: 14, name: 'Game 14', image: `${process.env.PUBLIC_URL}/images/game14.jp` },
+  { id: 15, name: 'Game 15', image: `${process.env.PUBLIC_URL}/images/game15.jp` },
+  { id: 16, name: 'Game 16', image: `${process.env.PUBLIC_URL}/images/game16.jp` },
+  { id: 17, name: 'Game 17', image: `${process.env.PUBLIC_URL}/images/game17.jp` },
+  { id: 18, name: 'Game 18', image: `${process.env.PUBLIC_URL}/images/game18.jp` },
 ];
 
 const Library = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentage, setCurrentPage] = useState(1);
   const gamesPerPage = 12;
 
   // Calculate the range of games to display
