@@ -30,8 +30,3 @@
   display: inline-block;
   vertical-align: middle;
 }
-
-  .game-card p {
-    white-space: normal; /* Allow text to wrap normally on small screens */
-  }
-}
