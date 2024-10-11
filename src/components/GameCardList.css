@@ -1,9 +1,18 @@
-.custom-pagination .pagination-button {
-  padding: 10px 20px;
+.custom-pagination {
+  display: flex; /* Align items */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center items */
+  overflow: hidden; /* Hide overflow */
+}
+
+.custom-pagination .pagination-button { 
+  padding: 8px 16px; /* Reduced padding */
   border-radius: 5px;
   border: none;
   color: white;
   font-weight: bold;
+  max-width: 150px; /* Limit button width */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .custom-pagination .previous {
@@ -30,4 +39,16 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.custom-pagination .pagination-button.active {
+  background-color: #007bff; /* Highlight active page button */
+  color: white; /* Change text color if needed */
+}
+
+@media (max-width: 600px) {
+  .custom-pagination .pagination-button {
+    padding: 6px 12px; /* Smaller padding for smaller screens */
+  }
+}
+
 
