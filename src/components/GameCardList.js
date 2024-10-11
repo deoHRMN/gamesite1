@@ -4,25 +4,40 @@ import { games } from './Games';  // Assume games is imported from a data file
 
 const GameCardList = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const gamesPerPage = 4;  // Set how many games per page
+  const gamesPerPage = 4; // Set how many games per page
 
   // Pagination logic
   const indexOfLastGame = currentPage * gamesPerPage;
   const indexOfFirstGame = indexOfLastGame - gamesPerPage;
   const currentGames = games.slice(indexOfFirstGame, indexOfLastGame);
-
   const totalPages = Math.ceil(games.length / gamesPerPage);
 
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
+  const handlePageChange = (direction) => {
+    setCurrentPage((prevPage) => {
+      if (direction === 'next' && prevPage < totalPages) {
+        return prevPage + 1;
+      } else if (direction === 'prev' && prevPage > 1) {
+        return prevPage - 1;
+      }
+      return prevPage; // Return the current page if no changes are needed
+    });
   };
 
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+  const renderPaginationButtons = () => {
+    const buttons = [];
+    for (let i = 1; i <= totalPages; i++) {
+      buttons.push(
+        <Button
+          key={i}
+          variant="secondary"
+          onClick={() => setCurrentPage(i)}
+          className={`mx-1 ${currentPage === i ? 'active' : ''}`}
+        >
+          {i}
+        </Button>
+      );
     }
+    return buttons;
   };
 
   return (
@@ -58,17 +73,17 @@ const GameCardList = () => {
       <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
         <Button
           variant="primary"
-          onClick={handlePrevPage}
+          onClick={() => handlePageChange('prev')}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
-        <span className='text-white'>
-          Page {currentPage} of {totalPages}
-        </span>
+        <div className="pagination-buttons d-flex">
+          {renderPaginationButtons()}
+        </div>
         <Button
           variant="primary"
-          onClick={handleNextPage}
+          onClick={() => handlePageChange('next')}
           disabled={currentPage === totalPages}
         >
           Next
@@ -79,4 +94,5 @@ const GameCardList = () => {
 };
 
 export default GameCardList;
+
 
