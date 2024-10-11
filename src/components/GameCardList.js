@@ -29,20 +29,20 @@ const GameCardList = () => {
     <Container fluid>
       <Row>
         {currentGames.map((game) => (
-          <Col key={game.id} xs={12} className="mb-3">
+          <Col key={game.id} xs={12} md={6} lg={3} className="mb-3">
             <Card bg="dark" text="light" className="d-flex flex-row" style={{ height: '100%' }}>
               <Card.Img
                 variant="top"
                 src={game.image}
                 style={{ width: '120px', height: '100%', objectFit: 'cover', borderRadius: '5px 0 0 5px' }}
               />
-              <Card.Body className="d-flex flex-column justify-content-between" style={{ maxHeight: '15vh' }}>
+              <Card.Body className="d-flex flex-column justify-content-between" style={{ minHeight: '200px' }}>
                 <div>
-                  <Card.Title className="text-white">{game.title}</Card.Title>
+                  <Card.Title className="text-white" style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{game.title}</Card.Title>
                   <Card.Text className="text-success" style={{ fontSize: '1.2rem' }}>
                     {game.price}
                   </Card.Text>
-                  <Card.Text>{game.description}</Card.Text>
+                  <Card.Text style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{game.description}</Card.Text>
                 </div>
                 <div className="d-flex justify-content-between align-items-end">
                   <Card.Text>Rating: {game.rating}</Card.Text>
@@ -54,7 +54,7 @@ const GameCardList = () => {
         ))}
       </Row>
 
-      {/* Pagination Controls similar to Library component */}
+      {/* Pagination Controls */}
       <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
         <Button
           variant="primary"
@@ -80,7 +80,3 @@ const GameCardList = () => {
 
 export default GameCardList;
 
-  );
-};
-
-export default GameCardList;
