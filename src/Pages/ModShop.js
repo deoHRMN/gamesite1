@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Button, Pagination, InputGroup, FormControl, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button, InputGroup, FormControl, Card } from 'react-bootstrap';
 import './ModShop.css';
 
 const initialModsData = [
@@ -46,7 +46,6 @@ const versionReleases = [
   const ModsPage = () => {
     const [mods, setMods] = useState(initialModsData); // Use state to manage mod data
     const [currentPage, setCurrentPage] = useState(1);
-    const [searchTerm, setSearchTerm] = useState('');
     const [addedSearchTerm, setAddedSearchTerm] = useState('');
     const modsPerPage = 16;
   
@@ -78,11 +77,6 @@ const versionReleases = [
         return mod;
       });
       setMods(updatedMods);
-    };
-  
-    // Handle Search for Public Mods
-    const handleSearch = (event) => {
-      setSearchTerm(event.target.value);
     };
   
     // Handle Search for Added Mods

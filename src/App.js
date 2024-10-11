@@ -7,6 +7,7 @@ import Home from './Pages/Home.js';
 import Store from './Pages/Store.js';
 import Forums from './Pages/Forums.js';
 import ModsPage from './Pages/ModShop.js';
+import AccountPage from './Pages/AccountPage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         return <Forums />
       case 'modshop':
         return <ModsPage />
+      case 'settings':
+        return <AccountPage />
       default:
         return <Home />;
     }
