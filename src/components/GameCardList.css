@@ -1,4 +1,3 @@
-/* Existing pagination CSS */
 .custom-pagination .pagination-button {
   padding: 10px 20px;
   border-radius: 5px;
@@ -30,38 +29,5 @@
   margin: 0 10px;
   display: inline-block;
   vertical-align: middle;
-}
-
-/* New CSS for fixing the container overflow issue */
-
-/* Ensure text is contained within its container */
-.text-container {
-  padding: 10px;
-  box-sizing: border-box;
-  max-width: 100%; /* Prevents overflow */
-  white-space: normal; /* Wrap text to fit in container */
-  word-wrap: break-word; /* Prevent long words from overflowing */
-}
-
-/* Styling for the game listing container */
-.game-listing {
-  width: 100%; /* Full width to contain text */
-  margin: 10px 0; /* Space between listings */
-  overflow: hidden; /* Ensure no content overflows */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-}
-
-/* Ensure images fit within the container */
-.game-listing img {
-  max-width: 100%; /* Fit image within container */
-  height: auto; /* Maintain aspect ratio of images */
-}
-
-/* Ensure ratings and release dates also stay within bounds */
-.game-listing .rating,
-.game-listing .release-date {
-  font-size: 1rem;
-  color: #888; /* Gray color for secondary text */
 }
 
