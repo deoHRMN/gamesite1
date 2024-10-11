@@ -6,41 +6,29 @@
     max-height: 400px; /* Adjust to your needs */
     overflow-y: auto; /* Enable vertical scrolling */
     border: 1px solid #333;
-}
-
-.scrollable-section {
+  }
+  
+  .scrollable-section {
     max-height: 300px; /* Adjust as needed */
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    padding: 10px; /* Add some padding for aesthetics */
-    border: 1px solid #444; /* Optional: distinguish the section */
-    border-radius: 4px; /* Match the overall container style */
-    background-color: #282828; /* Slightly different background for distinction */
-}
-
-.custom-checkbox {
-    margin-bottom: 10px; /* Spacing between checkboxes */
-}
-
-.custom-checkbox input[type='checkbox'] {
-    cursor: pointer; /* Change cursor on hover */
-}
-
-.custom-checkbox input[type='checkbox']:checked + label {
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked + label {
     color: orange; /* Label color when checkbox is checked */
-}
-
-.custom-checkbox input[type='checkbox']:checked {
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked {
     background-color: orange; /* Checkbox background when checked */
     border-color: orange; /* Checkbox border when checked */
-}
-
-/* Hover effect for checkboxes */
-.custom-checkbox input[type='checkbox']:hover {
+  }
+  
+  /* Hover effect for checkboxes */
+  .custom-checkbox input[type='checkbox']:hover {
     background-color: orange; /* Checkbox background on hover */
     border-color: orange; /* Checkbox border on hover */
-}
-
-.custom-checkbox label:hover {
+  }
+  
+  .custom-checkbox label:hover {
     color: orange; /* Label text color on hover */
-}
+  }
