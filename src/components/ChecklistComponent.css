@@ -1,0 +1,35 @@
+.checklist-container {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1f1f1f;
+    color: white;
+    max-height: 400px; /* Adjust to your needs */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #333;
+  }
+  
+  .scrollable-section {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked + label {
+    color: orange; /* Label color when checkbox is checked */
+  }
+  
+  .custom-checkbox input[type='checkbox']:checked {
+    background-color: orange; /* Checkbox background when checked */
+    border-color: orange; /* Checkbox border when checked */
+  }
+  
+  /* Hover effect for checkboxes */
+  .custom-checkbox input[type='checkbox']:hover {
+    background-color: orange; /* Checkbox background on hover */
+    border-color: orange; /* Checkbox border on hover */
+  }
+  
+  .custom-checkbox label:hover {
+    color: orange; /* Label text color on hover */
+  }
+  

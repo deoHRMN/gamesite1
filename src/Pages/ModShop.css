@@ -1,0 +1,46 @@
+.mods-container {
+    min-height: 90vh; /* Full viewport height */
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .public-mods {
+    overflow: hidden; /* Ensure public mods section stays within bounds */
+  }
+  
+  .added-mods {
+    max-height: 100%;
+  }
+  
+  .mod-card, .added-card, .version-card {
+    border-radius: 10px;
+  }
+  
+  .added-list, .version-releases {
+    background-color: #333; /* Optional dark background */
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .added-container, .version-container {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  
+  .added-list::-webkit-scrollbar, .version-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .added-list::-webkit-scrollbar-thumb, .version-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
+  
+  .added-list::-webkit-scrollbar-track, .version-container::-webkit-scrollbar-track {
+    background: #222;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  

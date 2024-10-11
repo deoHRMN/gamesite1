@@ -1,0 +1,32 @@
+.custom-pagination .pagination-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.custom-pagination .previous {
+  background-color: #555; /* Gray for disabled/previous button */
+}
+
+.custom-pagination .next {
+  background-color: #007bff; /* Blue for next button */
+}
+
+.custom-pagination .pagination-button:hover {
+  opacity: 0.8;
+}
+
+.custom-pagination .pagination-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.custom-pagination .page-number {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}

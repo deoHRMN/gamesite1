@@ -1,0 +1,41 @@
+.forums-container {
+    min-height: 90vh; /* Full viewport height */
+    padding: 20px;
+    background-color: black;;
+  }
+  
+  .public-forums {
+    overflow: hidden; /* Ensure public forums section stays within bounds */
+  }
+  
+  .subscribed-forums {
+    max-height: 100%;
+  }
+  
+  .forum-card, .subscribed-card {
+    border-radius: 10px;
+  }
+  
+  .subscribed-list {
+    background-color: #333; /* Optional dark background */
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .subscribed-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .subscribed-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+  }
+  
+  .subscribed-list::-webkit-scrollbar-track {
+    background: #222;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
