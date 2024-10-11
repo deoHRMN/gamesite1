@@ -3,8 +3,8 @@ import { Carousel } from 'react-bootstrap';
 import './PromotionalSlider.css'; // Optional custom styling
 
 const slides = [
-  { id: 1, title: 'Slide 1', description: 'Promotional Content 1', image: '/images/promotion1.jpg' },
-  { id: 2, title: 'Slide 2', description: 'Promotional Content 2', image: '/images/promotion2.jpg' },
+  { id: 1, title: 'Slide 1', description: 'Promotional Content 1', image: '${process.env.PUBLIC_URL}/images/promotion1.jpg' },
+  { id: 2, title: 'Slide 2', description: 'Promotional Content 2', image: '${process.env.PUBLIC_URL}/images/promotion2.jpg' },
 ];
 
 const PromotionalSlider = () => {

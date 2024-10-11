@@ -3,12 +3,12 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './NewsSection.css'; // Optional custom styling
 
 const newsArticles = [
-  { id: 1, title: 'News Title 1', date: 'October 9, 2024', image: '/images/news1.jpg' },
-  { id: 2, title: 'News Title 2', date: 'October 8, 2024', image: '/images/news2.jpg' },
-  { id: 3, title: 'News Title 3', date: 'October 7, 2024', image: '/images/news3.jpg' },
-  { id: 4, title: 'News Title 4', date: 'October 6, 2024', image: '/images/news4.jpg' },
-  { id: 5, title: 'News Title 5', date: 'October 5, 2024', image: '/images/news5.jpg' },
-  { id: 6, title: 'News Title 6', date: 'October 4, 2024', image: '/images/news6.jpg' },
+  { id: 1, title: 'News Title 1', date: 'October 9, 2024', image: '${process.env.PUBLIC_URL}/images/news1.jpg' },
+  { id: 2, title: 'News Title 2', date: 'October 8, 2024', image: '${process.env.PUBLIC_URL}/images/news2.jpg' },
+  { id: 3, title: 'News Title 3', date: 'October 7, 2024', image: '${process.env.PUBLIC_URL}/images/news3.jpg' },
+  { id: 4, title: 'News Title 4', date: 'October 6, 2024', image: '${process.env.PUBLIC_URL}/images/news4.jpg' },
+  { id: 5, title: 'News Title 5', date: 'October 5, 2024', image: '${process.env.PUBLIC_URL}/images/news5.jpg' },
+  { id: 6, title: 'News Title 6', date: 'October 4, 2024', image: '${process.env.PUBLIC_URL}/images/news6.jpg' },
 ];
 
 const NewsSection = () => {
