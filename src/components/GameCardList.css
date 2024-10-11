@@ -7,12 +7,14 @@
 .equal-height-row {
   height: 100%;
   display: flex;
+  flex-wrap: wrap; /* Wrap items if necessary */
 }
 
 .store-left-column, 
 .store-right-column {
   display: flex;
   flex-direction: column;
+  word-wrap: break-word; /* Ensure long text wraps inside containers */
 }
 
 .store-left-column {
@@ -26,15 +28,17 @@
 }
 
 .products-list-scroll {
-  overflow-y: auto;
+  overflow-y: auto; /* Enable scrolling */
   flex-grow: 1;
   border-radius: 10px;
+  max-height: 100%; /* Make sure it doesn't overflow parent */
 }
 
 .categories-scroll {
-  overflow-y: auto;
+  overflow-y: auto; /* Enable scrolling */
   flex-grow: 1;
   border-radius: 10px;
+  max-height: 100%; /* Make sure it doesn't overflow parent */
 }
 
 .mb-3 {
@@ -60,4 +64,48 @@
 .products-list-scroll::-webkit-scrollbar-thumb:hover,
 .categories-scroll::-webkit-scrollbar-thumb:hover {
   background: #777;
+}
+
+/* GameCardList specific styling */
+.game-card-list {
+  display: flex;
+  flex-direction: column; /* Stack game cards vertically */
+  gap: 15px; /* Space between cards */
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 5px;
+  overflow: hidden; /* Prevent text from spilling */
+  min-height: 150px; /* Ensure card has a minimum height */
+  max-height: 300px; /* Set a reasonable max height to prevent overflows */
+  flex-grow: 1;
+}
+
+.game-card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 14px;
+  color: #aaa;
+  white-space: normal; /* Ensure text wraps within the container */
+  word-wrap: break-word; /* Break long words or URLs */
+  overflow: hidden; /* Ensure it doesn't overflow */
+  text-overflow: ellipsis; /* Cut off long text with ellipsis */
+  max-height: 100px; /* Limit description height */
+  line-height: 1.2;
+}
+
+.game-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #59e;
+  margin-top: auto; /* Push price to the bottom of the card */
 }
