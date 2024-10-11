@@ -36,7 +36,7 @@ const GameCardList = () => {
                 src={game.image}
                 style={{ width: '120px', height: '100%', objectFit: 'cover', borderRadius: '5px 0 0 5px' }}
               />
-              <Card.Body className="d-flex flex-column justify-content-between" style={{ maxHeight: '15vh' }}>
+              <Card.Body className="d-flex flex-column justify-content-between" style={{ wordWrap: 'break-word' }}>
                 <div>
                   <Card.Title className="text-white">{game.title}</Card.Title>
                   <Card.Text className="text-success" style={{ fontSize: '1.2rem' }}>
