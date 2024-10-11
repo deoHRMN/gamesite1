@@ -1,3 +1,5 @@
+/* General Layout */
+
 .store-container {
   min-height: 100vh; /* Full viewport height */
   padding: 20px;
@@ -7,14 +9,14 @@
 .equal-height-row {
   height: 100%;
   display: flex;
-  flex-wrap: wrap; /* Wrap items if necessary */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
-.store-left-column, 
+.store-left-column,
 .store-right-column {
   display: flex;
   flex-direction: column;
-  word-wrap: break-word; /* Ensure long text wraps inside containers */
+  overflow: hidden; /* Make sure text doesn't overflow the container */
 }
 
 .store-left-column {
@@ -28,17 +30,17 @@
 }
 
 .products-list-scroll {
-  overflow-y: auto; /* Enable scrolling */
+  overflow-y: auto; /* Enable scrolling for long content */
   flex-grow: 1;
   border-radius: 10px;
-  max-height: 100%; /* Make sure it doesn't overflow parent */
+  max-height: 100%;
 }
 
 .categories-scroll {
-  overflow-y: auto; /* Enable scrolling */
+  overflow-y: auto;
   flex-grow: 1;
   border-radius: 10px;
-  max-height: 100%; /* Make sure it doesn't overflow parent */
+  max-height: 100%;
 }
 
 .mb-3 {
@@ -66,23 +68,24 @@
   background: #777;
 }
 
-/* GameCardList specific styling */
+/* GameCardList Specific CSS */
+
 .game-card-list {
   display: flex;
-  flex-direction: column; /* Stack game cards vertically */
+  flex-direction: column;
   gap: 15px; /* Space between cards */
+  overflow: hidden; /* Prevent overflow in the card list */
 }
 
 .game-card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   background-color: #222;
+  padding: 15px;
   border-radius: 5px;
-  overflow: hidden; /* Prevent text from spilling */
-  min-height: 150px; /* Ensure card has a minimum height */
-  max-height: 300px; /* Set a reasonable max height to prevent overflows */
-  flex-grow: 1;
+  min-height: 180px; /* Ensure card height */
+  max-height: 220px; /* Set max height to avoid overflow */
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .game-card h2 {
@@ -95,17 +98,25 @@
 .game-card p {
   font-size: 14px;
   color: #aaa;
-  white-space: normal; /* Ensure text wraps within the container */
-  word-wrap: break-word; /* Break long words or URLs */
-  overflow: hidden; /* Ensure it doesn't overflow */
-  text-overflow: ellipsis; /* Cut off long text with ellipsis */
-  max-height: 100px; /* Limit description height */
-  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Force text to stay on one line */
+  margin: 0;
 }
 
 .game-card .price {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
   color: #59e;
-  margin-top: auto; /* Push price to the bottom of the card */
+  margin-top: auto;
+}
+
+/* Add responsive breakpoints if necessary */
+@media (max-width: 768px) {
+  .game-card {
+    max-height: 200px; /* Reduce card height on smaller screens */
+  }
+
+  .game-card p {
+    white-space: normal; /* Allow text to wrap normally on small screens */
+  }
 }
