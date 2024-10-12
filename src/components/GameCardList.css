@@ -98,3 +98,8 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Optional improvement to limit card text wrapping */
+.card-text {
+  white-space: normal;  /* Allow text wrapping inside the card */
+}
