@@ -1,9 +1,73 @@
 import React, { useState } from 'react';
-import { Card, Row, Col, Container, Button } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import { games } from './Games';  // Assume games is imported from a data file
-import './GameCardList.css';
 
 const GameCardList = () => {
+
+  // Inline styles
+  const cardStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '10px',
+    borderRadius: '10px',
+    marginBottom: '10px',
+    backgroundColor: '#1f1f1f',
+    width: '100%',
+    height: '115px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1)',
+    transition: 'box-shadow 0.3s ease',
+  };
+
+  const cardHoverStyle = {
+    cursor: 'pointer',
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3), 0 10px 25px rgba(0, 0, 0, 0.3)',
+  };
+
+  const cardImageStyle = {
+    width: '85px',
+    height: '85px',
+    objectFit: 'cover',
+    borderRadius: '5px',
+    marginRight: '15px',
+  };
+
+  const cardDetailsStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    width: '100%',
+  };
+
+  const cardTitleStyle = {
+    fontSize: '1.1rem',
+    fontWeight: 'bold',
+    color: '#f5ba42',
+    marginBottom: '20px',
+  };
+
+  const cardPriceStyle = {
+    color: '#4caf50',
+    fontSize: '1rem',
+    marginBottom: '2px',
+  };
+
+  const cardDescriptionStyle = {
+    color: '#ddd',
+    fontSize: '0.8rem',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    marginBottom: '5px',
+    whiteSpace: 'nowrap',
+  };
+
+  const cardInfoStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: '0.75rem',
+    color: '#ccc',
+    flexShrink: 0,
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const gamesPerPage = 4;  // Set how many games per page
 
@@ -29,18 +93,23 @@ const GameCardList = () => {
   return (
     <Container fluid>
       <Row>
-        {currentGames.map((game) => (
+      {currentGames.map((game) => (
           <Col key={game.id} xs={12} className="mb-3">
-            <div className="card">
+            <div
+              className="card"
+              style={cardStyle}
+              onMouseEnter={(e) => (e.currentTarget.style.boxShadow = cardHoverStyle.boxShadow)}
+              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = cardStyle.boxShadow)}
+            >
               {/* Game Image */}
-              <img src={game.image} alt={game.title} className="card-image" />
+              <img src={game.image} alt={game.title} style={cardImageStyle} />
 
               {/* Card Details */}
-              <div className="card-details">
-                <div className="card-title">{game.title}</div>
-                <div className="card-price">{game.price}</div>
-                <div className="card-description">{game.description}</div>
-                <div className="card-info">
+              <div style={cardDetailsStyle}>
+                <div style={cardTitleStyle}>{game.title}</div>
+                <div style={cardPriceStyle}>{game.price}</div>
+                <div style={cardDescriptionStyle}>{game.description}</div>
+                <div style={cardInfoStyle}>
                   <span>Rating: {game.rating}</span>
                   <span>Released: {game.releaseDate}</span>
                 </div>
@@ -50,7 +119,7 @@ const GameCardList = () => {
         ))}
       </Row>
 
-      {/* Pagination Controls */}
+      {/* Pagination Controls similar to Library component */}
       <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
         <Button
           variant="primary"
@@ -59,7 +128,7 @@ const GameCardList = () => {
         >
           Previous
         </Button>
-        <span className="text-white">
+        <span className='text-white'>
           Page {currentPage} of {totalPages}
         </span>
         <Button
