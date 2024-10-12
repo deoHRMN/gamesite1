@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
+import './GameCardList.css';
 import { games } from './Games';  // Assume games is imported from a data file
 
 const GameCardList = () => {
@@ -28,30 +29,33 @@ const GameCardList = () => {
   return (
     <Container fluid>
       <Row>
-        {currentGames.map((game) => (
-          <Col key={game.id} xs={12} className="mb-3">
-            <Card bg="dark" text="light" className="d-flex flex-row" style={{ height: '100%' }}>
-              <Card.Img
-                variant="top"
-                src={game.image}
-                style={{ width: '120px', height: '100%', objectFit: 'cover', borderRadius: '5px 0 0 5px' }}
-              />
-              <Card.Body className="d-flex flex-column justify-content-between" style={{ maxHeight: '15vh' }}>
-                <div>
-                  <Card.Title className="text-white">{game.title}</Card.Title>
-                  <Card.Text className="text-success" style={{ fontSize: '1.2rem' }}>
-                    {game.price}
-                  </Card.Text>
-                  <Card.Text>{game.description}</Card.Text>
-                </div>
-                <div className="d-flex justify-content-between align-items-end">
-                  <Card.Text>Rating: {game.rating}</Card.Text>
-                  <Card.Text>Released: {game.releaseDate}</Card.Text>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
+      {currentGames.map((game) => (
+  <Col key={game.id} xs={12} className="mb-3">
+    <div className="card">
+      {/* Card Image */}
+      <img src={game.image} alt={game.name} className="card-image" />
+
+      {/* Card Details */}
+      <div className="card-details">
+        {/* Game Title */}
+        <div className="card-title">{game.name}</div>
+        
+        {/* Game Price */}
+        <div className="card-price">{game.price}</div>
+
+        {/* Game Description */}
+        <div className="card-description">{game.description}</div>
+
+        {/* Rating and Release Date */}
+        <div className="card-info">
+          <span>Rating: {game.rating}</span>
+          <span>Released: {game.releaseDate}</span>
+        </div>
+      </div>
+    </div>
+  </Col>
+))}
+
       </Row>
 
       {/* Pagination Controls similar to Library component */}
