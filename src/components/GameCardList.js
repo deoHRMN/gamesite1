@@ -42,7 +42,7 @@ const GameCardList = () => {
     fontSize: '1.1rem',
     fontWeight: 'bold',
     color: '#f5ba42',
-    marginBottom: '20px',
+    marginBottom: '2px',
   };
 
   const cardPriceStyle = {
@@ -102,11 +102,11 @@ const GameCardList = () => {
               onMouseLeave={(e) => (e.currentTarget.style.boxShadow = cardStyle.boxShadow)}
             >
               {/* Game Image */}
-              <img src={game.image} alt={game.title} style={cardImageStyle} />
+              <img src={game.image} alt={game.name} style={cardImageStyle} />
 
               {/* Card Details */}
               <div style={cardDetailsStyle}>
-                <div style={cardTitleStyle}>{game.title}</div>
+                <div style={cardTitleStyle}>{game.name}</div>
                 <div style={cardPriceStyle}>{game.price}</div>
                 <div style={cardDescriptionStyle}>{game.description}</div>
                 <div style={cardInfoStyle}>
