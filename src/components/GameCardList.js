@@ -90,6 +90,11 @@ const GameCardList = () => {
     }
   };
 
+  const handleCardClick = (game) => {
+    sessionStorage.setItem('selectedGame', JSON.stringify(game));
+    window.location.href = 'product'; // Redirect to the product page
+  }
+
   return (
     <Container fluid>
       <Row>
@@ -100,6 +105,7 @@ const GameCardList = () => {
               style={cardStyle}
               onMouseEnter={(e) => (e.currentTarget.style.boxShadow = cardHoverStyle.boxShadow)}
               onMouseLeave={(e) => (e.currentTarget.style.boxShadow = cardStyle.boxShadow)}
+              onClick={() => handleCardClick(game)}
             >
               {/* Game Image */}
               <img src={game.image} alt={game.name} style={cardImageStyle} />
