@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col, Container, Button } from 'react-bootstrap';
 import { games } from './Games';  // Assume games is imported from a data file
 
-const GameCardList = () => {
-
+const GameCardList = ({ onGameClick }) => {
   // Inline styles
   const cardStyle = {
     display: 'flex',
@@ -11,16 +10,11 @@ const GameCardList = () => {
     padding: '10px',
     borderRadius: '10px',
     marginBottom: '10px',
-    backgroundColor: '#1f1f1f',
+    backgroundColor: '#212529',
     width: '100%',
     height: '115px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1)',
     transition: 'box-shadow 0.3s ease',
-  };
-
-  const cardHoverStyle = {
-    cursor: 'pointer',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.3), 0 10px 25px rgba(0, 0, 0, 0.3)',
   };
 
   const cardImageStyle = {
@@ -90,22 +84,20 @@ const GameCardList = () => {
     }
   };
 
+  // Handle the game card click to navigate to Product.js
   const handleCardClick = (game) => {
-    sessionStorage.setItem('selectedGame', JSON.stringify(game));
-    window.location.href = 'product'; // Redirect to the product page
-  }
+    onGameClick(game);  // Pass the clicked game up to App.js
+  };
 
   return (
     <Container fluid>
       <Row>
-      {currentGames.map((game) => (
+        {currentGames.map((game) => (
           <Col key={game.id} xs={12} className="mb-3">
             <div
               className="card"
-              style={cardStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.boxShadow = cardHoverStyle.boxShadow)}
-              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = cardStyle.boxShadow)}
-              onClick={() => handleCardClick(game)}
+              style={{ ...cardStyle, cursor: 'pointer' }}  // Only change cursor on hover
+              onClick={() => handleCardClick(game)} // Handle click event
             >
               {/* Game Image */}
               <img src={game.image} alt={game.name} style={cardImageStyle} />
@@ -125,7 +117,7 @@ const GameCardList = () => {
         ))}
       </Row>
 
-      {/* Pagination Controls similar to Library component */}
+      {/* Pagination Controls */}
       <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
         <Button
           variant="primary"

@@ -38,7 +38,6 @@ const initialForumData = [
 const ForumsPage = () => {
   const [forums, setForums] = useState(initialForumData); // Use state to manage forum data
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState('');
   const [subscribedSearchTerm, setSubscribedSearchTerm] = useState('');
   const forumsPerPage = 16;
 
@@ -72,10 +71,6 @@ const ForumsPage = () => {
     setForums(updatedForums);
   };
 
-  // Handle Search for Public Forums
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
   // Handle Search for Subscribed Forums
   const handleSubscribedSearch = (event) => {

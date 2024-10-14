@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import HelperControls from '../components/HelperControls';
-import GameCardList from '../components/GameCardList';
+import GameCardList from '../components/GameCardList'; // Assuming this is the game list component
 import Searchbar from '../components/Searchbar';
 import ChecklistComponent from '../components/ChecklistComponent';
 import './Store.css';
 
-const Store = () => {
+const Store = ({ onGameClick }) => {
   return (
     <Container fluid className="store-container">
       <Row className="equal-height-row">
@@ -22,7 +22,7 @@ const Store = () => {
           {/* Product List (GameCardList) with overflow scroll */}
           <Row className="flex-grow-1 products-list-scroll">
             <Col>
-              <GameCardList />
+              <GameCardList onGameClick={onGameClick} /> {/* Pass onGameClick to GameCardList */}
             </Col>
           </Row>
         </Col>

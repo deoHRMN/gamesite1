@@ -1,8 +1,9 @@
 .checklist-container {
     padding: 20px;
     border-radius: 8px;
-    background-color: #1f1f1f;
+    background-color: #212529;
     color: white;
+    margin-top: 10px;
     max-height: 400px; /* Adjust to your needs */
     overflow-y: auto; /* Enable vertical scrolling */
     border: 1px solid #333;
