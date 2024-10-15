@@ -21,7 +21,7 @@ const ProductPage = ({ game, onBack }) => {
   }
 
   return (
-    <Container fluid style={{ padding: '20px',  height:'100%', backgroundColor: '#121212', color: '#f0f0f0' }}>
+    <Container fluid style={{ padding: '20px',  height:'100%', background: 'linear-gradient(90deg, #6d00a3, #00d4ff)',  /* Same gradient as header */ color: '#f0f0f0' }}>
       <Row className="align-items-stretch">
         {/* Left Column: Game Details and DLCs (70%) */}
         <Col md={8} className="d-flex flex-column mb-4">

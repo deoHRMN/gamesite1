@@ -1,6 +1,6 @@
 .store-container {
   padding: 20px;
-  background-color: linear-gradient(90deg, #6d00a3, #00d4ff);  /* Same gradient as header */
+  background: linear-gradient(90deg, #6d00a3, #00d4ff);  /* Same gradient as header */
   color: black;  /* Ensure that text is black */
 }
 
