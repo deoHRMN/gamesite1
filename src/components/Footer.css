@@ -1,0 +1,22 @@
+/* Gradient background for the footer */
+.gradient-background-footer {
+    background: linear-gradient(90deg, #c7fbc2, #eeb1a6);  /* Same gradient as the rest of the page */
+    color: black;  /* Black text for visibility */
+  }
+  
+  footer p {
+    color: black;  /* Ensure footer text is black */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  footer .nav-link {
+    color: black;  /* Ensure the footer nav links are black */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  footer .nav-link:hover {
+    color: #343a40;  /* Optional: Slight darkening of link on hover for better UX */
+  }
+  

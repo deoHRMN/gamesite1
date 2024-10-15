@@ -23,3 +23,28 @@
     overflow-y: auto; /* Enable scrolling if content overflows */
   }
   
+
+  /* Home.css */
+
+/* Gradient background that continues down the component */
+.gradient-background {
+  background: linear-gradient(90deg, #6d00a3, #00d4ff);  /* Same gradient as header */
+  color: black;  /* Ensure that text is black */
+}
+
+.library-column,
+.content-column {
+  background-color: transparent;  /* Ensure the content backgrounds are transparent */
+  padding: 20px;  /* Optional: Add some padding for spacing */
+}
+
+.promo-slider-row,
+.news-section-row {
+  background-color: transparent;  /* Transparent background for inner rows */
+}
+
+/* Optional styling for text and spacing */
+.library-column,
+.content-column {
+  color: black;  /* Ensures black text stands out against the gradient */
+}

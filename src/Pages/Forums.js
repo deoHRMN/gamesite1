@@ -90,13 +90,13 @@ const ForumsPage = () => {
           {/* Filter buttons */}
           <Row className="mb-3">
             <Col>
-              <Button variant="primary" className="w-100">Most Replies</Button>
+              <Button variant="warning" className="w-100">Most Replies</Button>
             </Col>
             <Col>
-              <Button variant="primary" className="w-100">Most Liked</Button>
+              <Button variant="warning" className="w-100">Most Liked</Button>
             </Col>
             <Col>
-              <Button variant="primary" className="w-100">Most Recent</Button>
+              <Button variant="warning" className="w-100">Most Recent</Button>
             </Col>
           </Row>
 

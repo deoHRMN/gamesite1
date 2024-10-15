@@ -97,10 +97,10 @@ const versionReleases = [
             {/* Filter buttons */}
             <Row className="mb-3">
               <Col>
-                <Button variant="primary" className="w-100">Most Popular</Button>
+                <Button variant="warning" className="w-100">Most Popular</Button>
               </Col>
               <Col>
-                <Button variant="primary" className="w-100">Newest</Button>
+                <Button variant="warning" className="w-100">Newest</Button>
               </Col>
             </Row>
   
@@ -129,7 +129,7 @@ const versionReleases = [
             {/* Pagination for Public Mods - Styled like the StorePage */}
             <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
               <Button
-                variant="primary"
+                variant="warning"
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
               >
@@ -139,7 +139,7 @@ const versionReleases = [
                 Page {currentPage} of {totalPages}
               </span>
               <Button
-                variant="primary"
+                variant="warning"
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
               >

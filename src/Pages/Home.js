@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Library from '../components/Library'; // Import the GameLibrary component
-import PromotionalSlider from '../components/PromotionalSlider';// Import the PromotionalSlider component
-import NewsSection from '../components/NewsSection';// Import the NewsSection component
-import './Home.css'; // Optional custom styling
+import Library from '../components/Library';
+import PromotionalSlider from '../components/PromotionalSlider';
+import NewsSection from '../components/NewsSection';
+import './Home.css'; // Custom styling with the gradient background
 
 const Home = () => {
   return (
-    <Container fluid className="home-container">
+    <Container fluid className="home-container gradient-background"> {/* Add gradient class here */}
       <Row>
         {/* First Column: Game Library */}
         <Col xs={12} md={5} lg={5} className="library-column">

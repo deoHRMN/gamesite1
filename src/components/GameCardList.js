@@ -120,17 +120,17 @@ const GameCardList = ({ onGameClick }) => {
       {/* Pagination Controls */}
       <div className="pagination-controls d-flex justify-content-between align-items-baseline mt-4">
         <Button
-          variant="primary"
+          variant="dark"
           onClick={handlePrevPage}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
-        <span className='text-white'>
+        <span className='text-black' style={{fontWeight:'bold', fontSize:'1rem'}}>
           Page {currentPage} of {totalPages}
         </span>
         <Button
-          variant="primary"
+          variant="dark"
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
         >

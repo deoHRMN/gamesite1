@@ -59,17 +59,17 @@ const Library = () => {
 
       <div className="pagination-controls d-flex justify-content-between align-items-baseline">
         <Button
-          variant="primary"
+          variant="dark"
           onClick={handlePrevPage}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
-        <span className='text-white'> 
+        <span className='text-black' style={{fontWeight:'bold'}}> 
           Page {currentPage} of {totalPages}
         </span>
         <Button
-          variant="primary"
+          variant="dark"
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
         >

@@ -1,0 +1,31 @@
+/* Header.css */
+
+/* Futuristic gradient for a game-like feel */
+.navbar-gradient {
+    background: linear-gradient(90deg, #c7fbc2, #eeb1a6);/* Deep purple to electric blue gradient */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link-custom {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;  /* Black text */
+  }
+  
+  .dropdown-custom .dropdown-menu {
+    background: linear-gradient(90deg, #c7fbc2, #eeb1a6);/* Gradient for dropdown background */
+  }
+  
+  .dropdown-item-custom {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .dropdown-item-custom:hover {
+    background-color: #00d4ff; /* Solid electric blue on hover */
+    color: black;
+  }
+  
+  .navbar-dark .navbar-toggler {
+    border-color: black; /* Black border for toggler */
+  }
+  

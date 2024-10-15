@@ -1,5 +1,7 @@
 .account-page {
     padding: 20px;
+    background: linear-gradient(90deg, #6d00a3, #00d4ff);  /* Same gradient as header */
+  color: black;  /* Ensure that text is black */
   }
   
   .account-buttons button {

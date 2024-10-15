@@ -46,7 +46,7 @@ const NewsSection = () => {
       {/* Pagination */}
       <div className="pagination-controls">
         <Button
-          variant="primary"
+          variant="dark"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -56,7 +56,7 @@ const NewsSection = () => {
           {currentPage} / {totalPages}
         </span>
         <Button
-          variant="primary"
+          variant="dark"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

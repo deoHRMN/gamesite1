@@ -1,7 +1,10 @@
 .forums-container {
     min-height: 90vh; /* Full viewport height */
     padding: 20px;
-    background-color: black;;
+    background: linear-gradient(90deg, #6d00a3, #00d4ff);  /* Same gradient as header */
+  min-height: 100vh;  /* Ensure it covers the full viewport height */
+  color: black;  /* Ensure that text is black */
+
   }
   
   .public-forums {

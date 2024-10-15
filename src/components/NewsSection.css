@@ -1,13 +1,13 @@
 .news-section {
     padding: 20px;
-    background-color: #1f1f1f;
+    background: linear-gradient(90deg, #c7fbc2, #eeb1a6); 
     border-radius: 10px;
-    border: 1px solid #333;
+    box-shadow: 4px 2px #292b2c;
   }
   
   .section-title {
     text-align: center;
-    color: white;
+    color: black;
     font-weight: bold;
     margin-bottom: 20px;
   }
