@@ -2,6 +2,7 @@
     padding: 20px;
     background: linear-gradient(90deg, #c7fbc2, #eeb1a6); 
     border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 4px 2px #292b2c;
   }
   
@@ -15,7 +16,7 @@
   .news-card {
     background-color: #292b2c;
     color: white;
-    border: 0;
+    border: 2px solid black;
     border-radius: 8px;
     display: flex;
     align-items: center;
